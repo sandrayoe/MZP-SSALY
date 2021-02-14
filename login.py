@@ -109,7 +109,7 @@ def user_not_found():
     user_not_found_screen = Toplevel(login_screen)
     user_not_found_screen.title("Success")
     user_not_found_screen.geometry("150x100")
-    Label(user_not_found_screen, text="User Not Found").pack()
+    Label(user_not_found_screen, text="Invalid User Name").pack()
     Button(user_not_found_screen, text="OK", command=delete_user_not_found_screen).pack()
  
 #Popups
