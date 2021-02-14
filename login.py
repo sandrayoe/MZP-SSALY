@@ -6,17 +6,17 @@ def validateLogin(username, password):
 	print("password entered :", password.get())
 	return
 
-#window
+#create window
 tkWindow = Tk()  
 tkWindow.geometry('250x150')  
-tkWindow.title('LOGIN - SSALY')
+tkWindow.title('LOGIN - SSALY') #header
 
-#username label and text entry box
+#username label and text entry
 usernameLabel = Label(tkWindow, text="User Name").grid(row=0, column=5)
 username = StringVar()
 usernameEntry = Entry(tkWindow, textvariable=username).grid(row=0, column=7)  
 
-#password label and password entry box
+#password label and password entry 
 passwordLabel = Label(tkWindow,text="Password").grid(row=1, column=5)  
 password = StringVar()
 passwordEntry = Entry(tkWindow, textvariable=password, show='*').grid(row=1, column=7)  
