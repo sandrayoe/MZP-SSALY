@@ -116,10 +116,8 @@ def user_not_found():
 def delete_login_success():
     login_success_screen.destroy()
  
- 
 def delete_password_not_recognised():
     password_not_recog_screen.destroy()
- 
  
 def delete_user_not_found_screen():
     user_not_found_screen.destroy()
@@ -131,7 +129,7 @@ def main_account_screen():
     main_screen = Tk()
     main_screen.geometry("300x250")
     main_screen.title("Account Login")
-    Label(text="Welcome to SSALY!", bg="yellow", width="300", height="2", font=("Arial", 13)).pack()
+    Label(text="Welcome to SSALY!", bg="yellow", width="300", height="2", font=("Arial", 14)).pack()
     Label(text="").pack()
     Button(text="Login", height="2", width="30", command = login).pack()
     Label(text="").pack()
