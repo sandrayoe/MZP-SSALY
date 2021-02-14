@@ -58,7 +58,7 @@ def login():
     Label(login_screen, text="").pack()
     Button(login_screen, text="Login", width=10, height=1, command = login_verify).pack()
  
-# Implementing event on register button
+#Register button
 def register_user():
  
     username_info = username.get()
@@ -69,7 +69,7 @@ def register_user():
  
     Label(register_screen, text="Registration Success", fg="green", font=("calibri", 11)).pack()
  
-# Implementing event on login button 
+#Login button 
 def login_verify():
     username1 = username_verify.get()
     password1 = password_verify.get()
@@ -94,7 +94,7 @@ def login_sucess():
     Label(login_success_screen, text="Login Success").pack()
     Button(login_success_screen, text="OK", command=delete_login_success).pack()
  
-# Designing popup for login invalid password
+#Popup for login invalid password
 def password_not_recognised():
     global password_not_recog_screen
     password_not_recog_screen = Toplevel(login_screen)
