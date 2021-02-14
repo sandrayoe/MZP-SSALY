@@ -2,9 +2,9 @@ from tkinter import *
 from functools import partial
 
 def validateLogin(username, password):
-	    print("username entered :", username.get())
-	    print("password entered :", password.get())
-    return
+	print("username entered :", username.get())
+	print("password entered :", password.get())
+	return
 
 #window
 tkWindow = Tk()  
@@ -24,6 +24,6 @@ passwordEntry = Entry(tkWindow, textvariable=password, show='*').grid(row=1, col
 validateLogin = partial(validateLogin, username, password)
 
 #login button
-loginButton = Button(tkWindow, text="Login", command=validateLogin).grid(row=4, column=0)  
+loginButton = Button(tkWindow, text="Login", command=validateLogin).grid(row=4, column=5)  
 
 tkWindow.mainloop()
