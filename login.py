@@ -2,7 +2,7 @@
 from tkinter import *
 import os
  
-# Designing window for registration
+#Window for registration
 def register():
     global register_screen
     register_screen = Toplevel(main_screen)
@@ -16,7 +16,7 @@ def register():
     username = StringVar()
     password = StringVar()
  
-    Label(register_screen, text="Please enter details below", bg="blue").pack()
+    Label(register_screen, text="Please enter details below", bg="yellow").pack()
     Label(register_screen, text="").pack()
     username_lable = Label(register_screen, text="Username * ")
     username_lable.pack()
@@ -27,10 +27,10 @@ def register():
     password_entry = Entry(register_screen, textvariable=password, show='*')
     password_entry.pack()
     Label(register_screen, text="").pack()
-    Button(register_screen, text="Register", width=10, height=1, bg="blue", command = register_user).pack()
+    Button(register_screen, text="Register", width=10, height=1, bg="yellow", command = register_user).pack()
  
  
-# Designing window for login 
+#Window for login 
 def login():
     global login_screen
     login_screen = Toplevel(main_screen)
@@ -59,16 +59,10 @@ def login():
     Button(login_screen, text="Login", width=10, height=1, command = login_verify).pack()
  
 # Implementing event on register button
- 
 def register_user():
  
     username_info = username.get()
     password_info = password.get()
- 
-    file = open(username_info, "w")
-    file.write(username_info + "\n")
-    file.write(password_info)
-    file.close()
  
     username_entry.delete(0, END)
     password_entry.delete(0, END)
@@ -83,19 +77,15 @@ def login_verify():
     password_login_entry.delete(0, END)
  
     list_of_files = os.listdir()
-    if username1 in list_of_files:
-        file1 = open(username1, "r")
-        verify = file1.read().splitlines()
-        if password1 in verify:
+    if username1 == 'admin':
+        if password1 == 'pass123':
             login_sucess()
- 
         else:
             password_not_recognised()
- 
     else:
         user_not_found()
  
-# Designing popup for login success
+#Popup for login success
 def login_sucess():
     global login_success_screen
     login_success_screen = Toplevel(login_screen)
@@ -113,7 +103,7 @@ def password_not_recognised():
     Label(password_not_recog_screen, text="Invalid Password ").pack()
     Button(password_not_recog_screen, text="OK", command=delete_password_not_recognised).pack()
  
-# Designing popup for user not found
+#Popup for user not found
 def user_not_found():
     global user_not_found_screen
     user_not_found_screen = Toplevel(login_screen)
@@ -122,7 +112,7 @@ def user_not_found():
     Label(user_not_found_screen, text="User Not Found").pack()
     Button(user_not_found_screen, text="OK", command=delete_user_not_found_screen).pack()
  
-# Deleting popups
+#Popups
 def delete_login_success():
     login_success_screen.destroy()
  
@@ -135,17 +125,17 @@ def delete_user_not_found_screen():
     user_not_found_screen.destroy()
  
  
-# Designing Main(first) window
+#Main(first) window
 def main_account_screen():
     global main_screen
     main_screen = Tk()
     main_screen.geometry("300x250")
     main_screen.title("Account Login")
-    Label(text="Select Your Choice", bg="blue", width="300", height="2", font=("Calibri", 13)).pack()
+    Label(text="Welcome to SSALY!", bg="yellow", width="300", height="2", font=("Calibri", 13)).pack()
     Label(text="").pack()
     Button(text="Login", height="2", width="30", command = login).pack()
     Label(text="").pack()
-    Button(text="Register", height="2", width="30", command=register).pack()
+    Button(text="Register", height="2", width="30", command = register).pack()
  
     main_screen.mainloop()
  
