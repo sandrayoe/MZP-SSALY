@@ -67,7 +67,7 @@ def register_user():
     username_entry.delete(0, END)
     password_entry.delete(0, END)
  
-    Label(register_screen, text="Registration Success", fg="green", font=("calibri", 11)).pack()
+    Label(register_screen, text="Registration Success", fg="green", font=("Arial", 11)).pack()
  
 #Login button 
 def login_verify():
@@ -131,7 +131,7 @@ def main_account_screen():
     main_screen = Tk()
     main_screen.geometry("300x250")
     main_screen.title("Account Login")
-    Label(text="Welcome to SSALY!", bg="yellow", width="300", height="2", font=("Calibri", 13)).pack()
+    Label(text="Welcome to SSALY!", bg="yellow", width="300", height="2", font=("Arial", 13)).pack()
     Label(text="").pack()
     Button(text="Login", height="2", width="30", command = login).pack()
     Label(text="").pack()
