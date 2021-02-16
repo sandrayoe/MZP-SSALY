@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Choropleth Map</title>
+  <title>Prediksi Peta Persebaran Stunting Balita</title>
   <style>
     html,
     body,
@@ -34,17 +34,11 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#">Tentang</a>
             </li>
         </div>
     </nav>
-    <h2 style="text-align: center; margin-top: 20px">Peta Persebaran Anak Stunting di Indonesia</h2>
+    <h2 style="text-align: center; margin-top: 20px">Prediksi Peta Persebaran Anak Stunting di Indonesia</h2>
   
     <div id="container"> </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
@@ -61,43 +55,43 @@
     var dataSet2 = [];
     // create data set
     var dataSet = [
-              {"id":"ID.AC","value":0,url:"Aceh.html"},
-              {"id":"ID.KI","value":1,url:"Aceh.html"},
-              {"id":"ID.JR","value":2,url:"Aceh.html"},
-              {"id":"ID.JT","value":3,url:"Aceh.html"},
-              {"id":"ID.BE","value":4,url:"Aceh.html"},
-              {"id":"ID.BT","value":5,url:"Aceh.html"},
-              {"id":"ID.JK","value":6,url:"Aceh.html"},
-              {"id":"ID.KB","value":7,url:"Aceh.html"},
-              {"id":"ID.LA","value":8,url:"Aceh.html"},
-              {"id":"ID.SL","value":9,url:"Aceh.html"},
-              {"id":"ID.BB","value":10,url:"Aceh.html"},
-              {"id":"ID.BA","value":11,url:"Aceh.html"},
-              {"id":"ID.JI","value":12,url:"Aceh.html"},
-              {"id":"ID.KS","value":13,url:"Aceh.html"},
-              {"id":"ID.NT","value":14,url:"Aceh.html"},
-              {"id":"ID.SE","value":15,url:"Aceh.html"},
-              {"id":"ID.SR","value":16,url:"Aceh.html"},
-              {"id":"ID.KR","value":17,url:"Aceh.html"},
-              {"id":"ID.GO","value":18,url:"Aceh.html"},
-              {"id":"ID.JA","value":19,url:"Aceh.html"},
-              {"id":"ID.KT","value":20,url:"Aceh.html"},
-              {"id":"ID.IB","value":21,url:"Aceh.html"},
-              {"id":"ID.SU","value":22,url:"Aceh.html"},
-              {"id":"ID.RI","value":23,url:"Aceh.html"},
-              {"id":"ID.SW","value":24,url:"Aceh.html"},
-              {"id":"ID.133","value":25,url:"Aceh.html"},
-              {"id":"ID.SB","value":26,url:"Aceh.html"},
-              {"id":"ID.YO","value":27,url:"Aceh.html"},
-              {"id":"ID.MA","value":28,url:"Aceh.html"},
-              {"id":"ID.NB","value":29,url:"Aceh.html"},
-              {"id":"ID.SG","value":30,url:"Aceh.html"},
-              {"id":"ID.ST","value":31,url:"Aceh.html"},
-              {"id":"ID.PA","value":32,url:"Aceh.html"}];
+              {"id":"ID.AC","value":10,url:"Aceh.html","value1":10},
+              {"id":"ID.KI","value":1,url:"Aceh.html","value1":20},
+              {"id":"ID.JR","value":2,url:"Aceh.html","value1":30},
+              {"id":"ID.JT","value":3,url:"Aceh.html","value1":40},
+              {"id":"ID.BE","value":4,url:"Aceh.html","value1":10},
+              {"id":"ID.BT","value":5,url:"Aceh.html","value1":20},
+              {"id":"ID.JK","value":6,url:"Aceh.html","value1":30},
+              {"id":"ID.KB","value":7,url:"Aceh.html","value1":40},
+              {"id":"ID.LA","value":8,url:"Aceh.html","value1":50},
+              {"id":"ID.SL","value":9,url:"Aceh.html","value1":60},
+              {"id":"ID.BB","value":10,url:"Aceh.html","value1":10},
+              {"id":"ID.BA","value":11,url:"Aceh.html","value1":20},
+              {"id":"ID.JI","value":12,url:"Aceh.html","value1":30},
+              {"id":"ID.KS","value":13,url:"Aceh.html","value1":10},
+              {"id":"ID.NT","value":14,url:"Aceh.html","value1":20},
+              {"id":"ID.SE","value":15,url:"Aceh.html","value1":30},
+              {"id":"ID.SR","value":16,url:"Aceh.html","value1":50},
+              {"id":"ID.KR","value":17,url:"Aceh.html","value1":10},
+              {"id":"ID.GO","value":18,url:"Aceh.html","value1":30},
+              {"id":"ID.JA","value":19,url:"Aceh.html","value1":20},
+              {"id":"ID.KT","value":20,url:"Aceh.html","value1":10},
+              {"id":"ID.IB","value":21,url:"Aceh.html","value1":40},
+              {"id":"ID.SU","value":22,url:"Aceh.html","value1":70},
+              {"id":"ID.RI","value":23,url:"Aceh.html","value1":20},
+              {"id":"ID.SW","value":24,url:"Aceh.html","value1":60},
+              {"id":"ID.133","value":25,url:"Aceh.html","value1":40},
+              {"id":"ID.SB","value":26,url:"Aceh.html","value1":10},
+              {"id":"ID.YO","value":27,url:"Aceh.html","value1":10},
+              {"id":"ID.MA","value":28,url:"Aceh.html","value1":70},
+              {"id":"ID.NB","value":29,url:"Aceh.html","value1":50},
+              {"id":"ID.SG","value":30,url:"Aceh.html","value1":10},
+              {"id":"ID.ST","value":31,url:"Aceh.html","value1":30},
+              {"id":"ID.PA","value":32,url:"Aceh.html","value1":6dd0}];
   
     // create choropleth series
     var series = map.choropleth(dataSet);
-    series.tooltip().format("ID : {%id}\n Persentase balita stunting: {%value}");
+    series.tooltip().format("ID : {%id}\n Persentase balita stunting: {%value}%");
     map.listen("pointDblClick", function(e){
         var new_value = e.point.get("url");
         window.open(new_value,"_blank");
@@ -112,7 +106,7 @@
     var series1 = map.marker(dataSet2);
    //format the labels of the id-defined series
     series1.labels().format("");
-    series1.tooltip().format("Penurunan angka stunting: {%value}");
+    series1.tooltip().format("Persentase penurunan angka stunting: {%value1}%");
 
     // hovered and selected labels
     series1.normal().fill("yellow",0.3);
